@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+  <h2 id="count">-</h1>
+    <table>
+
+      <tbody id="tableBody">
+
+        <tr>
+          <td><button onclick="buttonNumber('+')">+</button></td>
+          <td><button onclick="buttonNumber('-')">-</button></td>
+          <td><button onclick="buttonNumber('*')">*</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="buttonNumber(1)">1</button></td>
+          <td><button onclick="buttonNumber(2)">2</button></td>
+          <td><button onclick="buttonNumber(3)">3</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="buttonNumber(4)">4</button></td>
+          <td><button onclick="buttonNumber(5)">5</button></td>
+          <td><button onclick="buttonNumber(6)">6</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="buttonNumber(7)">7</button></td>
+          <td><button onclick="buttonNumber(8)">8</button></td>
+          <td><button onclick="buttonNumber(9)">9</button></td>
+        </tr>
+        <tr>
+          <td colspan="3"><button style="width:70%;">0</button></td>
+          <td colspan="3"><button onclick="calculate()" style="width: 30%;">=</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      var value = 0;
+      function buttonNumber(number) {
+        value += number;
+        document.getElementById("count").innerHTML = value;
+      }
+   function calculate() {
+    document.getElementById("count").innerHTML = eval(document.getElementById("count").innerHTML);
+    
+   }
+    </script>
+    <!-- <script src="src/script.js"></script> -->
+</body>
+
+</html>
